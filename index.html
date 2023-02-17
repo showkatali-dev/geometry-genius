@@ -32,7 +32,7 @@
 
 <body class="font-inter">
     <!-- header section -->
-    <header class="w-11/12 mx-auto">
+    <header class="w-[95%] mx-auto">
         <div class="flex justify-between items-center bg-sky-100 py-4 px-6 rounded-md my-6">
             <div>
                 <h1 class="text-3xl font-semibold text-gray-700">SAM</h1>
@@ -46,11 +46,11 @@
     <!-- header section -->
 
     <!-- main section -->
-    <main class="w-11/12 mx-auto">
+    <main class="w-[95%] mx-auto">
         <div class="grid grid-cols-4 gap-4">
             <!-- geometry section -->
             <div class="col-span-3 grid grid-cols-3 gap-4">
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/triangle.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Triangle</h3>
                     <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>b</span> × <span>h</span></p>
@@ -64,7 +64,7 @@
                         class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/rectangle.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Rectangle</h3>
                     <p class="text-gray-600 mb-4">Area (A) = <span>w</span> × <span>l</span></p>
@@ -78,7 +78,7 @@
                         class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/parallelogram.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Parallelogram</h3>
                     <p class="text-gray-600 mb-4">Area (A) = <span>b</span> × <span>h</span></p>
@@ -91,7 +91,7 @@
                     <button
                         class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/rhombus.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Rhombus</h3>
                     <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>d<sub>1</sub></span> ×
@@ -106,7 +106,7 @@
                     <button
                         class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/pentagon.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Pentagon</h3>
                     <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>p</span> × <span>b</span></p>
@@ -119,7 +119,7 @@
                     <button
                         class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="card duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/ellipse.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Ellipse</h3>
                     <p class="text-gray-600 mb-4">Area (A) = π<span>a</span><span>b</span></p>
@@ -136,7 +136,20 @@
 
             <!-- area calculation -->
             <div>
+                <div class="border-2 border-gray-300 rounded-md p-4">
+                    <h3 class="text-xl font-semibold text-gray-700 text-center">Area Calculation</h3>
+                    <hr class="w-40 border-2 block mx-auto mb-6">
 
+                    <ul class="list-decimal list-inside">
+                        <li class="text-sm"><span>Triangle</span><span class="mx-3"><span
+                                    class="result ">12</span>cm<sup>2</sup></span>
+                            <button
+                                class="bg-blue-500 px-2 py-1 rounded-md text-green-100 font-medium hover:bg-blue-600 duration-300">Convert
+                                to
+                                m<sup>2</sup></button>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </main>
