@@ -1,5 +1,12 @@
-// cart add event listener
+// element selection
 const carts = document.querySelectorAll('.cart');
+const editBtns = document.querySelectorAll('.editBtn');
+const okBtns = document.querySelectorAll('.okBtn');
+const btnsCalculate = document.querySelectorAll('.calculateBtn');
+const blogBtn = document.querySelector('.blogBtn');
+
+
+// cart add event listener
 for (let cart of carts) {
     cart.addEventListener('mouseover', (event)=>{
         let colorCode = colorCodeGenerator();
@@ -17,7 +24,6 @@ for (let cart of carts) {
 
 
 // edit button add event listener
-const editBtns = document.querySelectorAll('.editBtn');
 for (let editBtn of editBtns) {
     editBtn.addEventListener('click', ()=>{
         editBtn.closest('.cart').querySelector('.input-field').classList.remove('invisible');
@@ -25,7 +31,6 @@ for (let editBtn of editBtns) {
 }
 
 // ok button add event listener
-const okBtns = document.querySelectorAll('.okBtn');
 for (let okBtn of okBtns) {
     okBtn.addEventListener('click', ()=>{
         const inputs = okBtn.closest('.cart').querySelectorAll('input');
@@ -45,24 +50,13 @@ for (let okBtn of okBtns) {
 
 
 // calculate button add event listener
-const btnsCalculate = document.querySelectorAll('.calculateBtn');
 for (let btnCalculate of btnsCalculate) {
     btnCalculate.addEventListener('click', ()=>{
         calculateButtonEvent(btnCalculate);
     })
 }
 
-// open modal
-const openBtn = document.querySelector('.openModal');
-const modal = document.querySelector('.modal');
-openBtn.addEventListener('click', ()=>{
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
-});
-
-// close modal
-const closeBtn = document.querySelector('.closeModal');
-closeBtn.addEventListener('click', ()=>{
-    modal.classList.add('hidden');
-    document.body.style.overflow = 'auto';
+// blog button add event listener
+blogBtn.addEventListener('click', ()=>{
+    window.location.href = '../blog.html';
 })
