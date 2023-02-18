@@ -1,5 +1,5 @@
+// cart add event listener
 const carts = document.querySelectorAll('.cart');
-
 for (let cart of carts) {
     cart.addEventListener('mouseover', (event)=>{
         let colorCode = colorCodeGenerator();
@@ -47,3 +47,18 @@ for (let btnCalculate of btnsCalculate) {
         calculateButtonEvent(btnCalculate);
     })
 }
+
+// open modal
+const openBtn = document.querySelector('.openModal');
+const modal = document.querySelector('.modal');
+openBtn.addEventListener('click', ()=>{
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+});
+
+// close modal
+const closeBtn = document.querySelector('.closeModal');
+closeBtn.addEventListener('click', ()=>{
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+})
