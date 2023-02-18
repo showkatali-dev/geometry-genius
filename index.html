@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
+    <!-- font-awesome cdn -->
+    <script src="https://kit.fontawesome.com/efa78af784.js" crossorigin="anonymous"></script>
+
     <!-- tailwind cdn -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -30,7 +33,7 @@
     </script>
 </head>
 
-<body class="font-inter">
+<body class="font-inter max-w-[1440px] mx-auto">
     <!-- header section -->
     <header class="w-[95%] mx-auto">
         <div class="flex justify-between items-center bg-sky-100 py-4 px-6 rounded-md my-6">
@@ -47,9 +50,9 @@
 
     <!-- main section -->
     <main class="w-[95%] mx-auto">
-        <div class="grid grid-cols-4 gap-4">
+        <div class="grid grid-cols-1 min-[1250px]:grid-cols-3 gap-4 py-4">
             <!-- geometry section -->
-            <div class="col-span-3 grid grid-cols-3 gap-4">
+            <div class="min-[1250px]:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/triangle.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Triangle</h3>
@@ -60,8 +63,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="h"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnTriangle"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
@@ -74,8 +77,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="l"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnRectangle"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
@@ -88,8 +91,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="h"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnParallelogram"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/rhombus.png" alt="" class="h-32 block mx-auto mb-6">
@@ -103,8 +106,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="d2"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnRhombus"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/pentagon.png" alt="" class="h-32 block mx-auto mb-6">
@@ -116,8 +119,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="b"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnPentagon"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
                 <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
                     <img src="./images/ellipse.png" alt="" class="h-32 block mx-auto mb-6">
@@ -129,8 +132,8 @@
                         <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
                             placeholder="b"> <span>cm</span>
                     </div>
-                    <button
-                        class="block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
+                    <button id="btnEllipse"
+                        class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
             </div>
 
@@ -140,14 +143,14 @@
                     <h3 class="text-xl font-semibold text-gray-700 text-center">Area Calculation</h3>
                     <hr class="w-40 border-2 block mx-auto mb-6">
 
-                    <ul class="list-decimal list-inside">
-                        <li class="text-sm"><span>Triangle</span><span class="mx-3"><span
+                    <ul class="calculation-list list-decimal list-inside">
+                        <!-- <li class="text-sm"><span>Triangle</span><span class="mx-3"><span
                                     class="result ">12</span>cm<sup>2</sup></span>
                             <button
                                 class="bg-blue-500 px-2 py-1 rounded-md text-green-100 font-medium hover:bg-blue-600 duration-300">Convert
                                 to
                                 m<sup>2</sup></button>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
             </div>
