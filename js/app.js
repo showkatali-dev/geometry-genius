@@ -8,18 +8,10 @@ const blogBtn = document.querySelector('.blogBtn');
 
 // cart add event listener
 for (let cart of carts) {
-    cart.addEventListener('mouseover', (event)=>{
+    cart.addEventListener('mouseover', ()=>{
         let colorCode = colorCodeGenerator();
         cart.style.backgroundColor = `#${colorCode}`;
-        event.target.addEventListener('mouseover', (e)=>{
-            cart.style.backgroundColor = `#${colorCode}`;
-        })
-
     });
-    cart.addEventListener('mouseout', ()=>{
-        cart.style.backgroundColor = 'inherit';
-    })
-
 }
 
 
