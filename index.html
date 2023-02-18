@@ -53,84 +53,132 @@
         <div class="grid grid-cols-1 min-[1250px]:grid-cols-3 gap-4 py-4">
             <!-- geometry section -->
             <div class="min-[1250px]:col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/triangle.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Triangle</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>b</span> × <span>h</span></p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="b"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="h"> <span>cm</span>
+                    <p class="text-gray-600">Area (A) = 0.5 × <span>b</span> × <span>h</span></p>
+                    <p class="text-gray-600 mb-2 align-middle"><span>b = <span class="value1">4</span> cm</span> <span
+                            class="mx-2">h =
+                            <span class="value2">6</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="b" value="4"> <span>cm</span>
+                        <input type="text" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="h" value="6"> <span>cm</span> <button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnTriangle"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/rectangle.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Rectangle</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = <span>w</span> × <span>l</span></p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="w"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="l"> <span>cm</span>
+                    <p class="text-gray-600">Area (A) = <span>w</span> × <span>l</span></p>
+                    <p class="text-gray-600 mb-2 align-middle"><span>w = <span class="value1">12</span> cm</span> <span
+                            class="mx-2">l =
+                            <span class="value2">8</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="w" value="12"> <span>cm</span>
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="l" value="8"> <span>cm</span> <button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnRectangle"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
 
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/parallelogram.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Parallelogram</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = <span>b</span> × <span>h</span></p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="b"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="h"> <span>cm</span>
+                    <p class="text-gray-600">Area (A) = <span>b</span> × <span>h</span></p>
+                    <p class="text-gray-600 mb-2 align-middle"><span>b = <span class="value1">10</span> cm</span> <span
+                            class="mx-2">h =
+                            <span class="value2">12</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="b" value="10"> <span>cm</span>
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="h" value="12"> <span>cm</span><button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnParallelogram"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/rhombus.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Rhombus</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>d<sub>1</sub></span> ×
+                    <p class="text-gray-600">Area (A) = 0.5 × <span>d<sub>1</sub></span> ×
                         <span>d<sub>2</sub></span>
                     </p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="d1"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="d2"> <span>cm</span>
+                    <p class="text-gray-600 mb-2 align-middle"><span>d<sub>1</sub> = <span class="value1">16</span>
+                            cm</span> <span class="mx-2">d<sub>2</sub> =
+                            <span class="value2">8</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="d1" value="16"> <span>cm</span>
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="d2" value="8"> <span>cm</span> <button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnRhombus"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/pentagon.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Pentagon</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = 0.5 × <span>p</span> × <span>b</span></p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="p"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="b"> <span>cm</span>
+                    <p class="text-gray-600">Area (A) = 0.5 × <span>p</span> × <span>b</span></p>
+                    <p class="text-gray-600 mb-2 align-middle"><span>p = <span class="value1">6</span> cm</span> <span
+                            class="mx-2">b =
+                            <span class="value2">10</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="p" value="6"> <span>cm</span>
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="b" value="10"> <span>cm</span> <button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnPentagon"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
                 </div>
-                <div class="cart duration-300 text-center rounded-md p-8 border-2 border-gray-300">
+                <div class="cart duration-300 text-center rounded-md py-8 px-6 border-2 border-gray-300">
                     <img src="./images/ellipse.png" alt="" class="h-32 block mx-auto mb-6">
                     <h3 class="text-xl font-semibold text-gray-700">Ellipse</h3>
-                    <p class="text-gray-600 mb-4">Area (A) = π<span>a</span><span>b</span></p>
-                    <div class="flex items-center justify-center gap-2 text-gray-700 mb-6">
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="a"> <span>cm</span>
-                        <input type="text" id="" class="w-20 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
-                            placeholder="b"> <span>cm</span>
+                    <p class="text-gray-600">Area (A) = π<span>a</span><span>b</span></p>
+                    <p class="text-gray-600 mb-2 align-middle"><span>a = <span class="value1">10</span> cm</span> <span
+                            class="mx-2">b =
+                            <span class="value2">4</span> cm</span>
+                        <button class="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+                    </p>
+                    <div
+                        class="input-field invisible flex items-center justify-center gap-2 text-gray-700 mb-6 text-sm">
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="a" value="10"> <span>cm</span>
+                        <input type="text" id="" class="w-14 px-2 py-1 border-none bg-gray-100 outline-none rounded-md"
+                            placeholder="b" value="4"> <span>cm</span> <button
+                            class="okBtn ml-2 bg-blue-500 text-gray-100 rounded-sm px-1 hover:bg-blue-600"><i
+                                class="fa-solid fa-check"></i></button>
                     </div>
                     <button id="btnEllipse"
                         class="calculateBtn block mx-auto bg-blue-500 text-gray-100 w-full py-2 font-medium rounded-lg hover:bg-blue-600 duration-300">Calculate</button>
@@ -159,7 +207,7 @@
     <!-- main section -->
 
 
-
+    <script src="./js/utilities.js"></script>
     <script src="./js/app.js"></script>
 </body>
 
