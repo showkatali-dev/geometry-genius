@@ -21,40 +21,41 @@ function valueUpdate(element, firstVal, secondVal) {
 // calculate button function
 function calculateButtonEvent(btn) {
     const inputs = btn.closest('.cart').querySelectorAll('input');
-    let firstVal = Number(inputs[0].value);
-    let secondVal = Number(inputs[1].value);
-    let validation = checkValidation(firstVal, secondVal);
+    if (inputs[0].value === '' || inputs[1].value === '') {
+        alert('Input field should not be empty')
+    } else {
+        let firstVal = Number(inputs[0].value);
+        let secondVal = Number(inputs[1].value);
+        let validation = checkValidation(firstVal, secondVal);
 
-    if (validation) {
-        valueUpdate(btn, firstVal, secondVal);
-        if (btn.id == 'btnTriangle') {
-            let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
-            getOutput('Triangle', result);
-        } else if (btn.id == 'btnRectangle') {
-            let result = parseFloat((firstVal * secondVal).toFixed(2));
-            getOutput('Rectangle', result);
-        } else if (btn.id == 'btnParallelogram') {
-            let result = parseFloat((firstVal * secondVal).toFixed(2));
-            getOutput('Parallelogram', result);
-        } else if (btn.id == 'btnRhombus') {
-            let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
-            getOutput('Rhombus', result);
-        } else if (btn.id == 'btnPentagon') {
-            let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
-            getOutput('Pentagon', result);
-        } else if (btn.id == 'btnEllipse') {
-            let result = parseFloat((3.14 * firstVal * secondVal).toFixed(2));
-            getOutput('Ellipse', result);
+        if (validation) {
+            valueUpdate(btn, firstVal, secondVal);
+            if (btn.id == 'btnTriangle') {
+                let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
+                getOutput('Triangle', result);
+            } else if (btn.id == 'btnRectangle') {
+                let result = parseFloat((firstVal * secondVal).toFixed(2));
+                getOutput('Rectangle', result);
+            } else if (btn.id == 'btnParallelogram') {
+                let result = parseFloat((firstVal * secondVal).toFixed(2));
+                getOutput('Parallelogram', result);
+            } else if (btn.id == 'btnRhombus') {
+                let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
+                getOutput('Rhombus', result);
+            } else if (btn.id == 'btnPentagon') {
+                let result = parseFloat((0.5 * firstVal * secondVal).toFixed(2));
+                getOutput('Pentagon', result);
+            } else if (btn.id == 'btnEllipse') {
+                let result = parseFloat((3.14 * firstVal * secondVal).toFixed(2));
+                getOutput('Ellipse', result);
+            }
         }
     }
 }
 
 // validation check function
 function checkValidation(firstVal, secondVal) {
-    if (firstVal === '' || secondVal === '') {
-        alert('Input field can not be empty');
-        return false;
-    } else if (isNaN(firstVal) || isNaN(secondVal)) {
+    if (isNaN(firstVal) || isNaN(secondVal)) {
         alert('Input value can not be a string. Please type number.')
         return false;
     } else if (firstVal <= 0 || secondVal <= 0) {

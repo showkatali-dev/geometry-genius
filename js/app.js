@@ -29,12 +29,16 @@ const okBtns = document.querySelectorAll('.okBtn');
 for (let okBtn of okBtns) {
     okBtn.addEventListener('click', ()=>{
         const inputs = okBtn.closest('.cart').querySelectorAll('input');
-        let firstVal = Number(inputs[0].value);
-        let secondVal = Number(inputs[1].value);
-        let validation = checkValidation(firstVal, secondVal); 
-        if (validation) {
-            okBtn.closest('.cart').querySelector('.input-field').classList.add('invisible');
-            valueUpdate(okBtn, firstVal, secondVal);
+        if (inputs[0].value === '' || inputs[1].value === '') {
+            alert('Input field should not be empty')
+        } else {
+            let firstVal = Number(inputs[0].value);
+            let secondVal = Number(inputs[1].value);
+            let validation = checkValidation(firstVal, secondVal); 
+            if (validation) {
+                okBtn.closest('.cart').querySelector('.input-field').classList.add('invisible');
+                valueUpdate(okBtn, firstVal, secondVal);
+            }
         }
     })
 }
